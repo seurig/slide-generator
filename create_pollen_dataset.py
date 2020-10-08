@@ -15,19 +15,19 @@ os.mkdir(f'{object_name}_masks')
 
 slide_dims = (1280, 1280, 3)
 
-n_slides = 10 #10000
+n_slides = 10000
 pollen_per_slides = (1, 10)
 artefacts_per_slide = (1, 10)
 
-#class_split = (1, 0, 0, 0, 0, 0, 0, 0, 0, 0) # Corylus
-#class_split = (0, 0, 1, 0, 0, 0, 0, 0, 0, 0) # Secale
-#class_split = (0, 0, 0, 1, 0, 0, 0, 0, 0, 0) # Urtica
-#class_split = (0, 0, 0, 0, 0, 0, 1, 0, 0, 0) # Chenopodium
+#class_split = (1, 0, 0, 0) # Corylus
+#class_split = (0, 1, 0, 0) # Secale
+#class_split = (0, 0, 1, 0) # Urtica
+#class_split = (0, 0, 0, 1, 0, 0, 0) # Chenopodium
 
-class_split = (.25, 0, .25, .25, 0, 0, .25, 0, 0, 0) # equal split
-#class_split = (.1, 0, .7, .1, 0, 0, .1, 0, 0, 0) # bigger pollen split
-#class_split = (.1, 0, .1, .7, 0, 0, .1, 0, 0, 0) # small pollen split
-#class_split = (.4, 0, .25, .25, 0, 0, .1, 0, 0, 0) # middle pollen split
+class_split = (.25, .25, .25, .25, 0, 0, 0) # equal split
+#class_split = (.1, .7, .1, .1) # bigger pollen split
+#class_split = (.1, .1, .7, .1) # small pollen split
+#class_split = (.4, .25, .25, .1) # middle pollen split
 
 gen = ObjectSlidePlanner(pollen_images, pollen_sizes, artefact_images, slide_dims)
 gen.create_slide_structure(n_slides, pollen_per_slides, artefacts_per_slide, class_split, slide_dataframe_name)
