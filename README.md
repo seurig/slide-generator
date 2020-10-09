@@ -16,7 +16,7 @@ min_factor,max_factor
 path,mask_path,height,width,min_factor,max_factor
 - since there are not too many artefacts, there is no seperate file for the size factors
 
-Example dataset that was generated using this script can be viewed at Zenodo.
+Example dataset that was generated using this script can be viewed at https://zenodo.org/record/4073519.
 
 Sebastian Seurig (sebastian@seurig.com)
 
